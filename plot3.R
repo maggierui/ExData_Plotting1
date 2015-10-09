@@ -3,6 +3,7 @@ electricity_stat<-read.table("household_power_consumption.txt",sep=";",header=TR
 
 ##convert Date to POSIXlt format
 converted_stat<-data.frame()
+converted_stat<-electricity_stat
 converted_stat[,1]<-list(strptime(electricity_stat[,1],"%d/%m/%Y", tz=''))
 
 ##Subset data to dates of "2007-02-01" and "2007-02-02"
